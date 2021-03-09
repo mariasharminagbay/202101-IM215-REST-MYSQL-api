@@ -1,0 +1,16 @@
+{
+  "name": "202101-IM215-REST-MYSQL-api",
+  "version": "1.0.0",
+  "description": "This is tutorial on REST API using Express",
+  "main": "index.js",
+  "repository": "https://github.com/mariasharminagbay/202101-IM215-REST-MYSQL-api.git",
+  "author": "Maria Sharmin Agbay - mariasharminagbay.com",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+
+  "scripts": {
+    "dev": "node index.js"
+  }
+}
