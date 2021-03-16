@@ -56,9 +56,9 @@
 
 //4.
 
-const { response } = require('express');
+const { response } = require('express')
 const express = require('express') 
-const morgan = require('morgan');
+const morgan = require('morgan')
 const bodyParser = require('body-parser');
 
 const app = express()
@@ -94,8 +94,8 @@ app.get('/:first_name/:last_name/:age', (request,response) => {
     response.end()
 })
 //Route Parameter
-console.log('Query parameters')
-console.log(request.params)  //this will call the parameter
+//console.log('Query parameters')
+//console.log(request.params)  //this will call the parameter
 
 //-- #4
 app.listen(8888, () => {
