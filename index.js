@@ -28,10 +28,12 @@ const app = express()
 app.get('/', (request, response) => {
     console.log('Request received.')
     //response.send('Welcome');
-    response.json({'msg' : 'Welcome'}) ; // this will be used to have a json
+    //response.json({'msg' : 'Welcome'}) ; // this will be used to have a json
+    //both .send and .json opens a channel/connection and send the information and end the connection.
+    // both can be used either way
+    //take note that if there is no response.send or response.json back - and your will not end your connection - your connection will be hanging
+    response.end()
 })
-
-
 
 app.listen(8888, () => {
     console.log('THe server is up and listening on port 8888')
