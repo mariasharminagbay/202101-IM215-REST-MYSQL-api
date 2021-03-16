@@ -1,4 +1,5 @@
-// console.log("Hello world!!");
+// //this exercise is for the yarn to run the .js file
+// console.log("Hello world!!")
 
 // person = 'Sharmin';
 // character = {
@@ -6,49 +7,32 @@
 //     age: 21
 // }
 
-// console.log(person);
-// console.log(character);
-//-----------------------------
-const { response, request } = require('express')
-//const express = require('express')
-const morgan = require('morgan');
+// // console.log(person);
+// console.log(character)
+// //-- end of example for the yarn [script name] 
+
+
+
+// //-----------------------------
+
+// const { response, request } = require('express')
+//const { request, response } = require('express')
+const express = require('express')  
+//-- this call the express as module and its main goal to run an HTP module to you
+// const morgan = require('morgan');
 
 const app = express()
-app.use(morgan('combined'))
+
+// response should be added before calling listen; where you want to response before you listen
 
 app.get('/', (request, response) => {
-    //console.log('Request Received')
-    //response.json({msg: 'Welcome'});
-
-
-    /**
-     * Types of Parameters
-     * Query
-     * Route
-     * Body
-     * 
-     */
-
-    response.end()
+    console.log('Request received.')
+    //response.send('Welcome');
+    response.json({'msg' : 'Welcome'}) ; // this will be used to have a json
 })
+
+
 
 app.listen(8888, () => {
     console.log('THe server is up and listening on port 8888')
-})
-
-app.get('/id/:user_id', (request, response) => {
-
-    //Query
-    console.log('Query Parameters')
-    console.log(request.query)
-
-    //Route
-    console.log('#### Route Parameters')
-    console.log(request.params)
-
-    //Body
-    console.log('Body Parameters')
-    console.log(request.body)
-
-    response.end()
 })
