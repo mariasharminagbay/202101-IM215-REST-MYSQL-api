@@ -93,9 +93,24 @@ app.get('/:first_name/:last_name/:age', (request,response) => {
     console.log(request.params)  //this will call the parameter
     response.end()
 })
-//Route Parameter
-//console.log('Query parameters')
-//console.log(request.params)  //this will call the parameter
+
+app.get('/id/:userId', (request,response) => {
+
+    //Query
+    console.log('Query parameters')
+    console.log(request.query)
+
+    //Route Parameter
+    console.log('### Route parameters')
+    console.log(request.params)  //this will call the parameter
+    response.end()
+
+    //Body
+    console.log('Body parameters')
+    console.log(request.body)
+
+    response.end()
+})
 
 //-- #4
 app.listen(8888, () => {
